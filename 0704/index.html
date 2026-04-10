@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo-icon"></div>
+            <span class="logo-text">YOUR LOGO</span>
+        </div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for rooms, restaurants, or services...">
+        </div>
+        <div class="header-actions">
+            <button class="social-btn"><i class="fab fa-facebook-f"></i></button>
+            <button class="login-btn">LOGIN</button>
+            <button class="signup-btn">SIGN UP</button>
+        </div>
+    </header>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+
+    <nav class="sub-nav" id="menu">
+        <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">OFFERS</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">RESTAURANT</a></li>
+        </ul>
+        <div class="nav-icons">
+            <i class="fas fa-globe"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="left-column">
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>WELCOME!</h1>
+                    <p>Relax and Enjoy Exclusive Experiences</p>
+                    <button class="btn-orange hero-btn">BOOK NOW <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section class="promo-cards">
+                <div class="promo-card special-offers">
+                    <div class="promo-icon"><i class="fas fa-tags"></i></div>
+                    <div class="promo-text">
+                        <h3>SPECIAL OFFERS</h3>
+                        <p><strong>Up to 30% OFF</strong> on spa & wellness</p>
+                    </div>
+                    <button class="btn-orange-outline">View Offers <i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="promo-card popular-destinations">
+                    <div class="promo-icon"><i class="fas fa-plane-departure"></i></div>
+                    <div class="promo-text">
+                        <h3>POPULAR DESTINATIONS</h3>
+                        <p>Explore the Best Vacation Spots</p>
+                    </div>
+                    <button class="btn-glass">Discover <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section class="experiences">
+                <div class="section-header">
+                    <div class="icon-circle"></div>
+                    <h2>Luxury Experiences for You</h2>
+                </div>
+                <div class="experiences-grid">
+                    <div class="exp-card">
+                        <img src="assets/cruise.png" alt="Sunset Cruise">
+                        <div class="exp-details">
+                            <h4>Sunset Cruise</h4>
+                            <p>Private yacht experience</p>
+                            <div class="price-box">
+                                <span class="current-price">$129 <span class="per-person">/ per person</span></span>
+                                <span class="old-price">$192</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-card">
+                        <img src="assets/mountain.png" alt="Mountain Adventure">
+                        <div class="exp-details">
+                            <h4>Mountain Adventure</h4>
+                            <p>Guided nature hike</p>
+                            <div class="price-box">
+                                <span class="current-price">$99 <span class="per-person">/ per person</span></span>
+                                <span class="old-price">$69</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-card">
+                        <img src="assets/city.png" alt="City Lights Tour">
+                        <div class="exp-details">
+                            <h4>City Lights Tour</h4>
+                            <p>Evening sightseeing & dinner</p>
+                            <div class="price-box">
+                                <span class="current-price">$99 <span class="per-person">/ per person</span></span>
+                                <span class="old-price">$99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="exp-card more-card">
+                        <div class="circle-counter">247</div>
+                        <span>See itm more <i class="fas fa-chevron-right"></i></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="right-column">
+            <aside class="booking-widget">
+                <h2>Book Your Stay</h2>
+                <form class="booking-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="checkin">CHECK-IN:</label>
+                        <input type="date" id="checkin" name="checkin" class="input-glass" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="checkout">CHECK-OUT:</label>
+                        <input type="date" id="checkout" name="checkout" class="input-glass" required>
+                    </div>
+                    <div class="form-row">
+                        <select name="adults" class="input-glass half" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2" selected>2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                        </select>
+                        <select name="children" class="input-glass half">
+                            <option value="0">0 Children</option>
+                            <option value="1" selected>1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-orange full-width">SEARCH <i class="fas fa-chevron-right"></i></button>
+                    <a href="#" class="adv-search">Advanced Search <i class="fas fa-chevron-right"></i></a>
+                </form>
+            </aside>
+
+            <aside class="celebrity-widget">
+                <div class="celeb-content">
+                    <h3>Celebrity Guests</h3>
+                    <p>See who recently<br>stayed with us!</p>
+                    <button class="btn-glass" id="follow">Follow Celebrity Visits</button>
+                </div>
+                <img src="assets/woman.png" alt="Celebrity">
+            </aside>
+
+            <aside class="user-menu">
+                <a href="#" class="menu-item">
+                    <span><i class="fas fa-user"></i> MY PROFILE</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="menu-item">
+                    <span><i class="fas fa-user-friends"></i> INVITE FRIENDS</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                <a href="#" class="menu-item logout">
+                    <span><i class="fas fa-sign-out-alt"></i> LOG OUT</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </aside>
+
+            <div class="action-buttons">
+                <button class="btn-blue"><i class="fas fa-plus"></i> 659</button>
+                <button class="btn-green"><i class="fas fa-thumbs-up"></i> 2159</button>
+                <button class="btn-orange-solid"><i class="fas fa-envelope"></i> INVITE</button>
+            </div>
+        </div>
+    </main>
+    <script>
+        function toggleMenu() {
+            document.getElementById('menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
